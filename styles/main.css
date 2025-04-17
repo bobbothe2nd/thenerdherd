@@ -1,0 +1,501 @@
+body {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    /* Ensure main and aside are positioned side by side */
+    flex-direction: column;
+    /* Stack header and main vertically */
+    background: #1e1e2e;
+    /* Slightly darker background */
+    color: #f0f0f0;
+    /* Slightly brighter text */
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+h1 {
+    font-weight: bold;
+    font-size: 2rem;
+    margin-bottom: 0;
+    color: #ffffff;
+    /* Pure white for headings */
+}
+
+header {
+    position: relative;
+}
+
+footer {
+    bottom: 0;
+    text-align: center;
+}
+
+main {
+    margin-top: 1rem;
+    /* Add spacing below header */
+    position: relative;
+}
+
+aside {
+    width: 30vw;
+    right: 2rem;
+    /* Add spacing from the right edge */
+    top: 3rem;
+    position: absolute;
+    /* Position aside to the side of main */
+    margin-left: auto;
+    /* Push aside to the right */
+    padding: 1rem;
+}
+
+.landing-page-header {
+    background: linear-gradient(to top, #243b55, #3c6382);
+    /* Higher contrast gradient */
+    height: 4rem;
+    padding: 1rem;
+    text-align: center;
+    margin: 0 0 1rem 0;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    width: calc(100% - 32px);
+}
+
+.lesson-index {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    /* Improved responsiveness */
+    grid-template-rows: auto;
+    /* Adjusted for dynamic content */
+    gap: 8px;
+    margin: 0 8px 8px 8px;
+    /* Remove unnecessary top margin */
+}
+
+.lesson-card {
+    background: #222222;
+    /* Slightly brighter card background */
+    color: #f0f0f0;
+    /* Brighter text */
+    border: #444 solid 4px;
+    /* Higher contrast border */
+    border-radius: 8px;
+    text-align: center;
+    padding: 0 18% 0 18%;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    /* Smooth hover effect */
+    font-size: 13px;
+}
+
+.lesson-card:hover {
+    transform: translate(0, -10px);
+    /* Fixed invalid property */
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.15);
+    /* Improved shadow effect */
+}
+
+.main-header {
+    text-align: center;
+    margin: 1rem;
+}
+
+button {
+    color: #ffffff;
+    /* White text */
+    border: none;
+    border-radius: 4px;
+    padding: 8px 16px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    margin-bottom: 16px;
+}
+
+button.learn {
+    background: #1a73e8;
+    /* Brighter button color */
+}
+
+button.learn:hover {
+    background: #1558b0;
+    /* Higher contrast hover effect */
+}
+
+button.learn:disabled {
+    background: #ccc;
+    /* Disabled button styling */
+    cursor: not-allowed;
+}
+
+button.navigate {
+    background: #44556a;
+    /* Brighter button color */
+    width: 20vw;
+    text-align: center;
+}
+
+button.navigate:hover {
+    background: #3c4c61;
+    /* Higher contrast hover effect */
+}
+
+button.navigate:disabled {
+    background: #ccc;
+    /* Disabled button styling */
+    cursor: not-allowed;
+}
+
+.title {
+    font-size: 2rem;
+    font-weight: bolder;
+    color: #ffffff;
+    /* Pure white for headings */
+    margin: 0;
+}
+
+.subtitle {
+    color: #ffffff;
+    /* Pure white for headings */
+    font-size: 1rem;
+    font-weight: 500;
+    margin-top: 0;
+}
+
+.lesson-header {
+    text-align: center;
+    margin: 2rem 40vw 0 auto;
+    font-weight: bolder;
+    width: 50vw;
+}
+
+.article {
+    color: #cdd6f4;
+    /* Light text with a blue tint */
+    line-height: 1.2;
+    /* Increase line height for legibility */
+    padding: 1.5rem 1.5rem 1, 5rem 1.5rem;
+    /* Add padding for better spacing */
+    margin: 0 40vw 0 5vw;
+}
+
+p.article-body {
+    text-indent: 2rem;
+    font-size: 1rem;
+    /* Slightly larger font size */
+    color: #a6accd;
+    /* Softer blue tint for paragraph text */
+}
+
+.code {
+    background-color: #3b4252;
+    /* Brighter code background */
+    color: #eceff4;
+    /* Brighter code text */
+    font-family: "Fira Code", monospace;
+    padding: 2px;
+    border-radius: 4px;
+}
+
+.warning {
+    background-color: #7a2a2a;
+    /* Brighter dark red background */
+    color: #ffdddd;
+    /* Brighter light red text */
+    border-left: 4px solid #a94442;
+    padding: 1rem;
+    margin: 1rem 0;
+    border-radius: 4px;
+    font-weight: bold;
+    position: relative;
+}
+
+.disclaimer {
+    background-color: #5a4a1c;
+    /* Brighter dark yellow background */
+    color: #fff4c2;
+    /* Brighter light yellow text */
+    border-left: 4px solid #856404;
+    padding: 1rem;
+    margin: 1rem 0;
+    border-radius: 4px;
+    font-style: italic;
+}
+
+.note {
+    background-color: #1e4a5a;
+    /* Brighter dark blue background */
+    color: #c0f0f5;
+    /* Brighter light blue text */
+    border-left: 4px solid #0c5460;
+    padding: 1rem;
+    margin: 1rem 0;
+    border-radius: 4px;
+    font-weight: normal;
+}
+
+.tracker {
+    position: fixed;
+    top: 6rem;
+    /* Maximum height from the top */
+    right: 3rem;
+    width: 25vw;
+    border-radius: 8px;
+    overflow: hidden;
+    margin-top: 1rem;
+    background: #1e293b;
+    /* Dark background for contrast */
+    color: #e0e0e0;
+    /* Light text */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+    /* Subtle shadow for depth */
+    padding: 2rem;
+    /* Increased padding for better spacing */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    /* Smooth hover effect */
+}
+
+.tracker:hover {
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.5);
+    /* Enhanced shadow on hover */
+}
+
+.tracker-heading {
+    font-size: 1.5rem;
+    /* Larger font size */
+    font-weight: bold;
+    color: #ffffff;
+    /* Bright heading text */
+    margin-bottom: 1rem;
+    text-align: center;
+    border-bottom: 2px solid #60bfdb;
+    /* Accent border */
+    padding-bottom: 0.5rem;
+}
+
+.tracker ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.tracker li {
+    color: #ffffff;
+    /* Brighter link color */
+    font-weight: lighter;
+    transition: color 0.3s ease, font-weight 0.3s ease;
+}
+
+a,
+a:hover,
+a:visited,
+a:active {
+    color: inherit;
+    text-decoration: none;
+}
+
+.tracker a {
+    all: unset;
+    /* Reset all inherited and default styles */
+    display: inline-block;
+    /* Ensure proper box model for padding and hover effects */
+    color: #ffffff !important;
+    /* Force links to always be white */
+    background-color: transparent;
+    /* No background for inactive links */
+    border-radius: 4px;
+    /* Add subtle rounding for links */
+    padding: 4px 8px;
+    /* Add padding for better click area */
+    font-weight: lighter;
+    text-decoration: none;
+    /* Remove underline */
+    cursor: pointer;
+    /* Ensure pointer cursor for links */
+    transition: filter 0.3s ease, transform 0.3s ease;
+    /* Add filter transition for hover effect */
+}
+
+.tracker a.active {
+    font-weight: bold;
+    color: #ffffff !important;
+    /* Ensure active links are also white */
+    background-color: #007BFF;
+    /* Distinct background for active link */
+    transition: background-color 0.3s ease, color 0.3s ease;
+    /* Smooth transition */
+}
+
+.tracker a:hover {
+    transform: translateX(2px);
+    /* Subtle slide effect on hover */
+    filter: brightness(80%);
+    /* Darken the color by 20% */
+    background-color: inherit;
+    /* Ensure background remains consistent */
+    color: #ffffff !important;
+    /* Ensure hover links remain white */
+}
+
+.tracker a:active {
+    font-weight: bold;
+    text-decoration: underline;
+    color: #ffffff !important;
+    /* Ensure active state links remain white */
+}
+
+.section-header {
+    font-size: 1.5rem;
+    font-weight: bolder;
+    margin-top: 2.5rem;
+    color: #ffffff;
+    /* Pure white for headings */
+}
+
+.tracker-heading {
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: #ffffff;
+    /* Pure white heading text */
+    margin-bottom: 1rem;
+    text-align: center;
+    border-bottom: 2px solid #1a73e8;
+    /* Brighter border */
+    padding-bottom: 0.5rem;
+}
+
+.main-footer {
+    background-color: #1e293b;
+    /* Dark background for contrast */
+    color: #e0e0e0;
+    /* Light text */
+    text-align: center;
+    /* Center-align content */
+    padding: 2rem;
+    /* Add padding for spacing */
+    border-top: 2px solid #60bfdb;
+    /* Accent border at the top */
+    font-size: 0.9rem;
+    /* Slightly smaller font size */
+    line-height: 1.5;
+    /* Improve readability */
+}
+
+.main-footer a {
+    color: #60bfdb;
+    /* Accent color for links */
+    text-decoration: none;
+    /* Remove underline */
+    margin: 0 0.5rem;
+    /* Add spacing between links */
+    transition: color 0.3s ease;
+    /* Smooth hover effect */
+}
+
+.main-footer a:hover {
+    color: #1a73e8;
+    /* Brighter hover color */
+}
+
+.main-footer table {
+    width: 100%;
+    /* Full width */
+    margin-top: 1rem;
+    /* Add spacing above the table */
+    border-collapse: collapse;
+    /* Remove gaps between table cells */
+    color: #e0e0e0;
+    /* Light text */
+    font-size: 0.9rem;
+    /* Slightly smaller font size */
+}
+
+.main-footer th,
+.main-footer td {
+    border: 1px solid #60bfdb;
+    /* Accent border for cells */
+    padding: 0.5rem;
+    /* Add padding for better spacing */
+    text-align: center;
+    /* Center-align text */
+}
+
+.main-footer th {
+    background-color: #243b55;
+    /* Darker background for header cells */
+    font-weight: bold;
+    /* Bold text for headers */
+}
+
+.main-footer td {
+    background-color: #1e293b;
+    /* Dark background for data cells */
+}
+
+.main-footer tr:nth-child(even) td {
+    background-color: #243b55;
+    /* Alternate row background for better readability */
+}
+
+.popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #1e293b;
+    /* Dark background for contrast */
+    color: #e0e0e0;
+    /* Light text */
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+    /* Subtle shadow for depth */
+    z-index: 1000;
+    display: none;
+    /* Hidden by default */
+    text-align: center;
+    width: 300px;
+}
+
+.popup.active {
+    display: block;
+    /* Show when active */
+}
+
+.popup button {
+    margin-top: 1rem;
+    background-color: #007BFF;
+    color: #ffffff;
+    border: none;
+    border-radius: 4px;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.popup button:hover {
+    background-color: #0056b3;
+}
+
+.about {
+    padding: 2rem;
+    line-height: 1.6;
+    color: #e0e0e0;
+    background-color: #1e1e2e;
+}
+
+.about h2 {
+    font-size: 1.75rem;
+    color: #ffffff;
+    margin-bottom: 1rem;
+}
+
+.about p {
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.about a {
+    color: #60bfdb;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.about a:hover {
+    color: #1a73e8;
+}

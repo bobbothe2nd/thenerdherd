@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Learn - The Nerd Herd</title>
+  <link rel="stylesheet" href="styles/main.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.31.1/ace.js"></script>
+  <script src="scripts/home.js" defer></script>
+</head>
+
+<body>
+  <header class="landing-page-header" role="banner">
+    <h1 class="title">The Nerd Herd</h1>
+    <p class="subtitle">
+      Explore articles, tutorials, and resources to deepen your understanding
+      of tech topics.
+    </p>
+  </header>
+  <main class="lesson-index" role="main">
+    <div class="lesson-card" role="region" aria-labelledby="cognitiveTitle">
+      <h1 class="title" id="verilogTitle">Verilog</h1>
+      <p class="subtitle">
+        Verilog is a language used to describe hardware like microchips and
+        PCBs.
+      </p>
+      <button class="learn" id="verilogBtn" aria-label="Coming Soon: Verilog" disabled>
+        Coming Soon
+      </button>
+    </div>
+    <div class="lesson-card" role="region" aria-labelledby="cognitiveTitle">
+      <h1 class="title" id="cognitiveTitle">Cognition</h1>
+      <p class="subtitle">
+        If one learns to think in parallel, their cognitive abilities will sky
+        rocket!
+      </p>
+      <button class="learn" id="cognitiveBtn" aria-label="Coming Soon: Python" disabled>
+        Coming Soon
+      </button>
+    </div>
+    <div class="lesson-card" role="region" aria-labelledby="binaryTitle">
+      <h1 class="title" id="binaryTitle">Binary</h1>
+      <p class="subtitle">
+        Computers are based on this low-level binary language that consists
+        entirely of 1s and 0s.
+      </p>
+      <button class="learn" id="binaryBtn" aria-label="Learn about Binary" disabled>
+        Coming Soon
+      </button>
+    </div>
+    <div class="lesson-card" role="region" aria-labelledby="htmlTitle">
+      <h1 class="title" id="htmlTitle">Front-End</h1>
+      <p class="subtitle">
+        Most websites are structured with HTML, styled by CSS,
+        and JS provides core functionality.
+      </p>
+      <button class="learn" id="htmlBtn" aria-label="Coming Soon: Front-End" disabled>
+        Coming Soon
+      </button>
+    </div>
+    <div class="lesson-card" role="region" aria-labelledby="pcTitle">
+      <h1 class="title" id="pcTitle">PC Building</h1>
+      <p class="subtitle">
+        PC building is an art that is easy to learn, but hard to master.
+      </p>
+      <button class="learn" id="pcBtn" aria-label="Coming Soon: PC Building" disabled>
+        Coming Soon
+      </button>
+    </div>
+    <div class="lesson-card" role="region" aria-labelledby="aboutTitle">
+      <h1 class="title" id="aboutTitle">About Us</h1>
+      <p class="subtitle">
+        Learn more about The Nerd Herd's mission, community, and how to get in
+        touch.
+      </p>
+      <button class="learn" id="aboutBtn" onclick="window.location.href='about.html'" aria-label="Learn About Us">
+        Learn More
+      </button>
+    </div>
+  </main>
+  <footer></footer>
+</body>
+
+</html>
